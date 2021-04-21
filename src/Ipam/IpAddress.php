@@ -5,6 +5,7 @@ namespace CmdrSharp\NetBox\Ipam;
 use CmdrSharp\NetBox\NetBox;
 use CmdrSharp\NetBox\Tenancy\Tenant;
 use CmdrSharp\NetBox\Traits\HandlesNetBoxResults;
+use Psr\Http\Message\ResponseInterface;
 
 class IpAddress extends NetBox
 {
@@ -27,6 +28,15 @@ class IpAddress extends NetBox
         'dns_name',
         'description',
     ];
+
+    /**
+     * @param string $ipAddress
+     * @return $this
+     */
+    public static function whereAddress(string $ipAddress): ResponseInterface
+    {
+        return parent::where("?address={$ipAddress}");
+    }
 
     /**
      * @param string $ipAddress
