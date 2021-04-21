@@ -4,6 +4,7 @@ namespace CmdrSharp\NetBox\Traits;
 
 trait HasFillable
 {
+    /** @var array */
     protected array $fillable = [];
 
     /**
