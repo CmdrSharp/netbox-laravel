@@ -31,7 +31,7 @@ class IpAddress extends NetBox
 
     /**
      * @param string $ipAddress
-     * @return $this
+     * @return ResponseInterface
      */
     public static function whereAddress(string $ipAddress): ResponseInterface
     {

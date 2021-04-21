@@ -80,6 +80,9 @@ Prefix::wherePrefix('172.16.0.0/24');
 // Returns a Guzzle ResponseInterface with getBody and getStatusCode methods.
 ```
 
+# Other resources
+* [Laravel NetBox BGP](https://github.com/CmdrSharp/netbox-laravel-bgp) - Extension that includes BGP Resources
+
 # Developing
 When creating new resources, please ensure to follow existing standards to ensure they remain compatible.
 The fillable array should ideally map 1:1 with the NetBox API Documentation. In cases where this requires special attribute management, we rely on the user knowing this ahead of time for mass assignment, and offer helpers in fluid setters to deal with these scenarios.
