@@ -38,7 +38,7 @@ class Role extends NetBox
      */
     public function setSlug(string $slug, bool $slugify = true): Role
     {
-        if($slugify) {
+        if ($slugify) {
             $slug = $this->slugify($slug);
         }
 

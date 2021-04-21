@@ -54,7 +54,7 @@ class Site extends NetBox
      */
     public function setSlug(string $slug, bool $slugify = true): Site
     {
-        if($slugify) {
+        if ($slugify) {
             $slug = $this->slugify($slug);
         }
 

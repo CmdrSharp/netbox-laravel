@@ -109,10 +109,11 @@ abstract class NetBox implements NetBoxInterface
     public function fill(array $attributes): NetBox
     {
         foreach ($this->fillableFromArray($attributes) as $key => $value) {
-            if(!$this->isFillable($key)) {
+            if (!$this->isFillable($key)) {
                 throw new MassAssignmentException(sprintf(
                     'Add [%s] to fillable property to allow mass assignment on [%s].',
-                    $key, get_class($this)
+                    $key,
+                    get_class($this)
                 ));
             }
 
