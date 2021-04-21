@@ -2,7 +2,7 @@
   "name": "cmdrsharp/netbox-laravel",
   "description": "A client for creating/reading from NetBox",
   "type": "libr",
-  "license": "Apache",
+  "license": "Apache-2.0",
   "require": {
     "php": ">=7.4",
     "laravel/framework": ">=7.0",
