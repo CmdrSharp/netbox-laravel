@@ -11,7 +11,7 @@ class IpAddress extends NetBox
     use HandlesNetBoxResults;
 
     /** @var string */
-    const API_PATH = 'api/ipam/ip-addresses/';
+    const API_PATH = parent::API_PATH . 'ipam/ip-addresses/';
 
     /** @var array|string[] */
     protected array $fillable = [

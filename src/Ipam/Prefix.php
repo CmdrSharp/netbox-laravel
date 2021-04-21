@@ -13,7 +13,7 @@ class Prefix extends NetBox
     use HandlesNetBoxResults;
 
     /** @var string */
-    const API_PATH = 'api/ipam/prefixes/';
+    const API_PATH = parent::API_PATH . 'ipam/prefixes/';
 
     /** @var array|string[] */
     protected array $fillable = [

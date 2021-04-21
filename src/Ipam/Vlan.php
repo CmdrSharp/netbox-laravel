@@ -12,7 +12,7 @@ class Vlan extends NetBox
     use HandlesNetBoxResults;
 
     /** @var string */
-    const API_PATH = 'api/ipam/vlans/';
+    const API_PATH = parent::API_PATH . 'ipam/vlans/';
 
     /** @var array|string[] */
     protected array $fillable = [

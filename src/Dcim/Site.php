@@ -13,7 +13,7 @@ class Site extends NetBox
         RequiresSlugs;
 
     /** @var string */
-    const API_PATH = 'api/dcim/sites/';
+    const API_PATH = parent::API_PATH . 'dcim/sites/';
 
     /** @var array|string[] */
     protected array $fillable = [

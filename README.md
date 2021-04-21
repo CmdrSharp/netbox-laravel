@@ -1,4 +1,4 @@
-# NetBox Laravel [![Latest Stable Version](https://poser.pugx.org/cmdrsharp/netbox-laravel/v/stable)](https://packagist.org/packages/cmdrsharp/netbox-laravel) [![MIT licensed](https://img.shields.io/badge/license-Apache-blue.svg)](./LICENSE)
+# NetBox Laravel [![Latest Stable Version](https://poser.pugx.org/cmdrsharp/netbox-laravel/v/stable)](https://packagist.org/packages/cmdrsharp/netbox-laravel) [![StyleCI](https://github.styleci.io/repos/360124398/shield?branch=main)](https://github.styleci.io/repos/360124398?branch=main) [![MIT licensed](https://img.shields.io/badge/license-Apache-blue.svg)](./LICENSE)
 
 This repo contains a client for interacting with the NetBox API - more specifically to be able to treat them more like resources (akin to Laravel models).
 

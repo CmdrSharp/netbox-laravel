@@ -10,7 +10,7 @@ class TenantGroup extends NetBox
     use RequiresSlugs;
 
     /** @var string */
-    const API_PATH = 'api/tenancy/tenant-groups/';
+    const API_PATH = parent::API_PATH . 'tenancy/tenant-groups/';
 
     /** @var array|string[] */
     protected array $fillable = [

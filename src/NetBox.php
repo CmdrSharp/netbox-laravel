@@ -15,6 +15,9 @@ abstract class NetBox implements NetBoxInterface
     use HasFillable,
         HasAttributes;
 
+    /** @var string */
+    const API_PATH = 'api/';
+
     /** @var RequestInterface */
     protected RequestInterface $api;
 

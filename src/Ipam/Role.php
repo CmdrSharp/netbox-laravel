@@ -10,7 +10,7 @@ class Role extends NetBox
     use RequiresSlugs;
 
     /** @var string */
-    const API_PATH = 'api/ipam/roles/';
+    const API_PATH = parent::API_PATH . 'ipam/roles/';
 
     /** @var array|string[] */
     protected array $fillable = [

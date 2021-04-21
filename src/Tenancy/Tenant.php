@@ -12,7 +12,7 @@ class Tenant extends NetBox
         RequiresSlugs;
 
     /** @var string */
-    const API_PATH = 'api/tenancy/tenants/';
+    const API_PATH = parent::API_PATH . 'tenancy/tenants/';
 
     /** @var array|string[] */
     protected array $fillable = [
