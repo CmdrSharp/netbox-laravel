@@ -41,7 +41,7 @@ class Tenant extends NetBox
      */
     public function setSlug(string $slug, bool $slugify = true): Tenant
     {
-        if($slugify) {
+        if ($slugify) {
             $slug = $this->slugify($slug);
         }
 

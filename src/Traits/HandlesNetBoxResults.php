@@ -18,7 +18,7 @@ trait HandlesNetBoxResults
         $class = get_class($this);
         $caller = $backtrace[1]['function'] ?? 'UNKNOWN';
 
-        if($response->getStatusCode() !== 200) {
+        if ($response->getStatusCode() !== 200) {
             throw new DynamicAssignmentException(
                 sprintf('[%s::%s] - NetBox API lookup returned HTTP [%s]', $class, $caller, $response->getStatusCode())
             );
@@ -26,20 +26,22 @@ trait HandlesNetBoxResults
 
         $results = json_decode($response->getBody());
 
-        if($results->count > 1) {
+        if ($results->count > 1) {
             throw new DynamicAssignmentException(sprintf(
                 '[%s::%s] - NetBox API Lookup failed as multiple groups (%s in total) match the target string',
-                $class, $caller, $results->count
+                $class,
+                $caller,
+                $results->count
             ));
         }
 
-        if($results->count < 1) {
+        if ($results->count < 1) {
             throw new DynamicAssignmentException(
                 sprintf('[%s::%s] - NetBox API Lookup failed as no resources match the search query', $class, $caller)
             );
         }
 
-        if(!isset($results->results[0]->id) || !$results->results[0] instanceof stdClass) {
+        if (!isset($results->results[0]->id) || !$results->results[0] instanceof stdClass) {
             throw new DynamicAssignmentException(
                 sprintf('[%s::%s] - NetBox API Lookup failed as no resources match the search query', $class, $caller)
             );
