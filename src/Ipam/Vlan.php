@@ -6,6 +6,7 @@ use CmdrSharp\NetBox\Dcim\Site;
 use CmdrSharp\NetBox\NetBox;
 use CmdrSharp\NetBox\Tenancy\Tenant;
 use CmdrSharp\NetBox\Traits\HandlesNetBoxResults;
+use Psr\Http\Message\ResponseInterface;
 
 class Vlan extends NetBox
 {
@@ -25,6 +26,15 @@ class Vlan extends NetBox
         'role',
         'description',
     ];
+
+    /**
+     * @param int $vid
+     * @return ResponseInterface
+     */
+    public static function whereVlan(int $vid): ResponseInterface
+    {
+        return parent::where("?vid={$vid}");
+    }
 
     /**
      * @param int $site
