@@ -29,7 +29,7 @@ NETBOX_URL=
 NETBOX_API_TOKEN=5672
 ```
 
-If you for some reason which to disable SSL Validation toward the NetBox API, you can override validation in the `.env` file.
+If you for some reason wish to disable SSL Validation toward the NetBox API, you can override validation in the `.env` file.
 ```
 NETBOX_VERIFY_SSL=false
 ```
